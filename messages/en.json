@@ -1,0 +1,91 @@
+{
+  "Navigation": {
+    "home": "Home",
+    "portfolio": "Portfolio",
+    "pricing": "Pricing",
+    "values": "Values",
+    "book": "Book a Call",
+    "sidebar_value_title": "Our Value Proposition",
+    "sidebar_lp_title": "Premium Landing Page",
+    "sidebar_lp_desc": "High-converting web presence with SEO, custom animations, and blazing fast performance.",
+    "sidebar_apk_title": "Mobile App (APK)",
+    "sidebar_apk_desc": "Native mobile experience with push notifications, offline mode, and App Store submission."
+  },
+  "Hero": {
+    "badge": "Lumea Labs is now accepting new clients",
+    "headline": "We ship production-ready SaaS in weeks, not months.",
+    "subheadline": "Stop wasting time on infrastructure. We build high-availability, cloud-native applications with elegant interfaces so you can focus on your business.",
+    "cta_primary": "Book a Consultation",
+    "cta_secondary": "View Portfolio"
+  },
+  "Portfolio": {
+    "title": "The Proof of Concept",
+    "subtitle": "Discover the premium products built and engineered by our experts.",
+    
+    "lumestack_title": "LumeStack SaaS Boilerplate",
+    "lumestack_description": "Premium Full-Stack Boilerplate with Next.js, Clerk Auth, and Prisma.",
+    "lumestack_problem": "The Problem: Founders waste weeks configuring complex authentication and infrastructure.",
+    "lumestack_arch": "The Architecture: Next.js App Router, Prisma ORM, and Clerk Identity Management.",
+    "lumestack_results": "The Results: Rapid SaaS deployment reducing go-to-market time by 80%.",
+    "lumestack_cta": "View Live Demo",
+    "lumestack_link": "https://lume-stack-final.vercel.app/",
+    
+    "predator_title": "Whale Predator Tracker",
+    "predator_description": "Institutional-grade real-time market analytics and asset monitoring platform.",
+    "predator_problem": "The Problem: Retail traders lack the tooling to monitor large, market-moving transactions.",
+    "predator_arch": "The Architecture: High-frequency data polling with Coinglass API integration.",
+    "predator_results": "The Results: Sub-second latency insights delivered directly to the dashboard.",
+    "predator_cta": "View Tracker",
+    "predator_link": "https://predator-tracker.vercel.app/",
+
+    "sadulur_title": "Sadulur Care",
+    "sadulur_description": "Award-winning digital health and caregiving platform designed for medical professionals.",
+    "sadulur_problem": "The Problem: Healthcare solutions often lack an intuitive, empathy-driven user experience.",
+    "sadulur_arch": "The Architecture: Scalable Web Application tailored for healthcare accessibility.",
+    "sadulur_results": "The Results: Successfully deployed for medical competitions and operational use.",
+    "sadulur_cta": "View Platform",
+    "sadulur_link": "https://sadulur-care.vercel.app/",
+
+    "kkf_title": "KKF Label E-Commerce",
+    "kkf_description": "High-performance digital storefront for a premium women's fashion boutique.",
+    "kkf_problem": "The Problem: Off-the-shelf platforms restrict design flexibility and brand identity.",
+    "kkf_arch": "The Architecture: Custom headless e-commerce engine optimized for conversions.",
+    "kkf_results": "The Results: A seamless shopping experience with blazingly fast load times.",
+    "kkf_cta": "View Storefront",
+    "kkf_link": "https://kkf-label.vercel.app/"
+  },
+  "Pricing": {
+    "title": "Pricing Architecture",
+    "subtitle": "Transparent pricing for elite engineering.",
+    "tier1_name": "Premium Landing Page",
+    "tier1_price": "$888",
+    "tier1_detail1": "High-Converting Custom Design",
+    "tier1_detail2": "SEO & Performance Optimization",
+    "tier1_detail3": "Subtle Animations & Micro-interactions",
+    "tier1_detail4": "Professional Copywriting",
+    "tier1_detail5": "1 Month Free Support",
+    "tier1_cta": "Book Landing Page",
+    "tier2_name": "Mobile App / APK",
+    "tier2_price": "$1,500",
+    "tier2_detail1": "Native iOS & Android Experience",
+    "tier2_detail2": "Push Notifications & Offline Mode",
+    "tier2_detail3": "Secure Authentication & API Integration",
+    "tier2_detail4": "App Store & Play Store Submission",
+    "tier2_detail5": "3 Months Priority Support",
+    "tier2_cta": "Book Mobile App"
+  },
+  "Values": {
+    "title": "Why Elite Teams Choose Us",
+    "subtitle": "We don't just write code. We engineer high-ticket solutions that scale.",
+    "speed_title": "Speed-to-Market",
+    "speed_desc": "Utilizing our proprietary LumeStack boilerplate to bypass weeks of setup. Launch your product in days, not months.",
+    "arch_title": "Enterprise Architecture",
+    "arch_desc": "Built on the robust foundations of Next.js, Prisma, and PostgreSQL. Highly available, type-safe, and ready to scale to millions.",
+    "perf_title": "Native Performance",
+    "perf_desc": "Obsessively optimized. From 100% Core Web Vitals to native-feeling mobile applications with zero jank."
+  },
+  "Booking": {
+    "title": "Seamless Conversion",
+    "subtitle": "Ready to build? Schedule a discovery call directly with our lead engineers."
+  }
+}
