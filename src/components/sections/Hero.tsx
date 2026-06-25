@@ -1,7 +1,10 @@
+"use client";
+
 import { useTranslations } from "next-intl";
 import { buttonVariants } from "@/components/ui/button";
 import { ArrowRight, Terminal } from "lucide-react";
 import { Link } from "@/i18n/routing";
+import { motion } from "framer-motion";
 
 export function Hero() {
   const t = useTranslations("Hero");
@@ -16,19 +19,42 @@ export function Hero() {
 
       <div className="container mx-auto px-4 sm:px-8">
         <div className="mx-auto max-w-4xl text-center">
-          <div className="mb-8 flex justify-center">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="mb-8 flex justify-center"
+          >
             <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-primary ring-1 ring-primary/20 hover:ring-primary/40 bg-primary/5 flex items-center gap-2">
               <Terminal className="h-4 w-4" />
               Lumea Labs System <span className="hidden sm:inline">Online</span>
             </div>
-          </div>
-          <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl md:text-7xl">
+          </motion.div>
+          
+          <motion.h1 
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+            className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight mb-6 text-transparent bg-clip-text bg-gradient-to-br from-zinc-100 via-zinc-300 to-zinc-600 drop-shadow-sm leading-tight"
+          >
             {t("headline")}
-          </h1>
-          <p className="mt-6 text-lg leading-8 text-muted-foreground max-w-2xl mx-auto">
+          </motion.h1>
+          
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
+            className="mt-6 text-lg leading-8 text-muted-foreground max-w-2xl mx-auto"
+          >
             {t("subheadline")}
-          </p>
-          <div className="mt-10 flex items-center justify-center gap-x-6">
+          </motion.p>
+          
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
+            className="mt-10 flex items-center justify-center gap-x-6"
+          >
             <Link 
               href="#contact" 
               className={buttonVariants({ size: "lg" }) + " bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white rounded-full font-semibold px-8 h-12 border-0 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_-10px_rgba(79,70,229,0.5)]"}
@@ -41,7 +67,7 @@ export function Hero() {
             >
               {t("cta_secondary")}
             </Link>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
