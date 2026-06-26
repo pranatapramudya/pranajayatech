@@ -1,18 +1,35 @@
-# PRD: Lumea Labs - Scroll Optimization & Animation Smoothness
+# PRD: Lumea Labs - Pricing Features Standardization
 
-## 1. Masalah Utama (Scroll Jank Diagnosis)
-- **Gejala:** Terjadi lag, stuttering, atau delay animasi saat halaman di-scroll ke bawah maupun ke atas. Animasi tidak berjalan mulus (drop frame rate).
-- **Penyebab Umum:** 1. Efek animasi menggunakan properti non-GPU (animasi pada `top`, `margin`, `padding`, atau `opacity` tanpa hardware acceleration).
-    2. Komponen `framer-motion` dengan prop `whileInView` melakukan re-render terus-menerus tanpa batasan `once: true`.
-    3. Terjadi *layout reflow* yang berat saat elemen masuk ke viewport.
+## 1. Objektif
+Mengubah *copywriting* pada komponen `Pricing.tsx` dari kalimat marketing abstrak menjadi daftar fitur teknis yang konkret dalam bahasa Indonesia, agar calon klien memahami batas ruang lingkup (*scope of work*) dari setiap paket.
 
-## 2. Solusi Teknis & Spesifikasi Performa
-- **Hardware Acceleration:** Wajib memaksa browser menggunakan GPU untuk render animasi dengan menambahkan properti `transform: translateZ(0)` atau `will-change: transform, opacity`.
-- **Framer Motion Optimization:**
-    - Semua komponen scroll-animation wajib dikonfigurasi dengan `viewport={{ once: true, margin: "-50px" }}` agar animasi hanya berjalan sekali saat pertama kali masuk layar.
-    - Hanya boleh menganimasikan properti berbasis komposit/GPU: `transform` (`x`, `y`, `scale`, `rotate`) dan `opacity`. dilarang keras menganimasikan posisi layout fisik.
-- **Debouncing/Throttling:** Jika ada scroll listener custom (`window.addEventListener('scroll')`), wajib dihapus atau diganti menggunakan `useScroll` dari Framer Motion secara pasif.
+## 2. Struktur Paket Harga & Fitur
 
-## 3. Kriteria Keberhasilan (Definition of Done)
-- Scroll terasa ringan dan lancar di semua device (terutama mobile dan layar dengan refresh rate tinggi 120Hz).
-- Skor *Interaction to Next Paint* (INP) dan *Cumulative Layout Shift* (CLS) di Lighthouse berada di zona hijau (95+).
+### Tier 1: Launchpad ($230)
+*Target: Personal brand, Landing page, Company profile sederhana.*
+- Landing Page Super Cepat (Lighthouse 95+)
+- Desain Responsif (Mobile, Tablet, Desktop)
+- Optimasi SEO Dasar & Google Analytics
+- Integrasi Formulir Kontak ke WhatsApp/Email
+- Gratis Hosting & Domain 1 Tahun
+
+### Tier 2: Business Suite ($650) - [Recommended]
+*Target: UMKM, Sistem Manajemen, Dashboard Admin.*
+- Semua fitur dari paket Launchpad
+- Sistem Dashboard Admin Custom
+- Database Terintegrasi (Manajemen Stok/Data)
+- Sistem Login & Hak Akses Pengguna (Auth)
+- Integrasi Payment Gateway (Xendit/Midtrans)
+
+### Tier 3: Growth Engine ($1,100)
+*Target: Bisnis skala menengah yang butuh ekosistem lengkap.*
+- Semua fitur dari paket Business Suite
+- **Aplikasi Mobile Android (APK/Play Store)**
+- Pembuatan RESTful API Khusus
+- Sistem Notifikasi Real-time
+- Prioritas Support Teknis & Maintenance
+
+## 3. Spesifikasi UI
+- Pertahankan struktur 2D yang sudah dioptimasi.
+- Ikon *checkmark* tetap dipertahankan untuk setiap item *list*.
+- Jangan ubah warna *gradient* atau *layout card*.
