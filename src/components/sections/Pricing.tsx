@@ -22,7 +22,8 @@ export function Pricing() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="text-3xl font-extrabold tracking-tight sm:text-4xl mb-4 text-transparent bg-clip-text bg-gradient-to-br from-zinc-100 via-zinc-400 to-zinc-800 drop-shadow-sm"
+            className="text-3xl font-extrabold tracking-tight sm:text-4xl mb-4 text-transparent bg-clip-text bg-gradient-to-br from-zinc-100 via-zinc-400 to-zinc-800 drop-shadow-sm transform-gpu"
+            style={{ willChange: "transform, opacity" }}
           >
             {t("title")}
           </motion.h2>
@@ -31,7 +32,8 @@ export function Pricing() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-            className="text-lg text-muted-foreground"
+            className="text-lg text-muted-foreground transform-gpu"
+            style={{ willChange: "transform, opacity" }}
           >
             {t("subtitle")}
           </motion.p>
@@ -40,12 +42,13 @@ export function Pricing() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto items-center">
           {/* Tier 1 */}
           <MotionCard 
-            className="bg-slate-900/40 backdrop-blur-xl border border-white/10 hover:border-zinc-700 transition-all flex flex-col h-full relative"
+            className="bg-slate-900/40 backdrop-blur-md border border-white/10 hover:border-zinc-700 transition-all flex flex-col h-full relative transform-gpu"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.5 }}
             whileHover={{ y: -5, scale: 1.02, transition: { duration: 0.2 } }}
+            style={{ willChange: "transform, opacity" }}
           >
             <CardHeader className="text-center pb-8 pt-10">
               <CardTitle className="text-2xl text-zinc-300">{t("tier1_name")}</CardTitle>
@@ -75,12 +78,13 @@ export function Pricing() {
 
           {/* Tier 2 (Premium) */}
           <MotionCard 
-            className="bg-slate-900/60 backdrop-blur-xl border border-blue-500/50 shadow-2xl shadow-blue-500/20 flex flex-col h-full relative overflow-hidden transform lg:scale-105 z-10"
+            className="bg-slate-900/60 backdrop-blur-md border border-blue-500/50 shadow-2xl shadow-blue-500/20 flex flex-col h-full relative overflow-hidden transform-gpu lg:scale-105 z-10"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.5, delay: 0.1 }}
             whileHover={{ y: -5, scale: 1.05, transition: { duration: 0.2 } }}
+            style={{ willChange: "transform, opacity" }}
           >
             <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-blue-500 to-transparent"></div>
             <div className="absolute top-0 right-0 p-4">
@@ -116,12 +120,13 @@ export function Pricing() {
 
           {/* Tier 3 */}
           <MotionCard 
-            className="bg-slate-900/40 backdrop-blur-xl border border-white/10 hover:border-zinc-700 transition-all flex flex-col h-full relative"
+            className="bg-slate-900/40 backdrop-blur-md border border-white/10 hover:border-zinc-700 transition-all flex flex-col h-full relative transform-gpu"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.5, delay: 0.2 }}
             whileHover={{ y: -5, scale: 1.02, transition: { duration: 0.2 } }}
+            style={{ willChange: "transform, opacity" }}
           >
             <CardHeader className="text-center pb-8 pt-10">
               <CardTitle className="text-2xl text-zinc-300">{t("tier3_name")}</CardTitle>

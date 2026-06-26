@@ -56,12 +56,13 @@ export function Portfolio() {
           ].map((project) => (
             <MotionCard 
               key={project.id} 
-              className="bg-slate-900/40 backdrop-blur-xl border border-white/10 transition-colors flex flex-col h-full overflow-hidden group"
+              className="bg-slate-900/40 backdrop-blur-md border border-white/10 transition-colors flex flex-col h-full overflow-hidden group transform-gpu"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5 }}
               whileHover={{ y: -5, scale: 1.02, transition: { duration: 0.2 } }}
+              style={{ willChange: "transform, opacity" }}
             >
               <div className={`h-2 w-full bg-gradient-to-r ${project.gradient} to-transparent opacity-50 group-hover:opacity-100 transition-opacity`}></div>
               <CardHeader className="p-4 sm:p-6 pb-2 sm:pb-6">

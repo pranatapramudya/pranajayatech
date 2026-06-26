@@ -31,7 +31,7 @@ export function Values() {
   return (
     <section id="values" className="py-24 sm:py-32 bg-background relative overflow-hidden">
       {/* subtle gradient background */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/5 rounded-full blur-[100px] pointer-events-none"></div>
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/5 rounded-full blur-[100px] pointer-events-none transform-gpu"></div>
 
       <div className="container mx-auto px-4 sm:px-8 relative z-10">
         <div className="mx-auto max-w-2xl text-center mb-16">
@@ -47,12 +47,13 @@ export function Values() {
           {values.map((val) => (
             <motion.div 
               key={val.id}
-              className="bg-slate-900/40 backdrop-blur-sm border border-white/5 rounded-2xl p-8 hover:border-amber-500/30 transition-all duration-300 group"
+              className="bg-slate-900/40 backdrop-blur-sm border border-white/5 rounded-2xl p-8 hover:border-amber-500/30 transition-all duration-300 group transform-gpu"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5 }}
               whileHover={{ y: -5, scale: 1.02, transition: { duration: 0.2 } }}
+              style={{ willChange: "transform, opacity" }}
             >
               <div className="w-12 h-12 bg-slate-950 rounded-xl border border-white/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 {val.icon}
