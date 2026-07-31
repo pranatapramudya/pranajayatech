@@ -6,7 +6,7 @@ import { useState, useTransition } from "react";
 import { submitLead } from "@/actions/submit-lead";
 import { Turnstile } from '@marsidev/react-turnstile';
 
-export function Booking() {
+export default function Booking() {
   const t = useTranslations("Booking");
   const [isLoading, setIsLoading] = useState(false);
   const [success, setSuccess] = useState(false);

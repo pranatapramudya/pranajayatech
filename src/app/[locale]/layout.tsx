@@ -6,6 +6,7 @@ import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { Analytics } from "@vercel/analytics/next";
+import { MotionProvider } from "@/components/providers/MotionProvider";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -61,7 +62,9 @@ export default async function RootLayout({
     >
       <body className="min-h-full flex flex-col font-sans bg-background text-foreground antialiased">
         <NextIntlClientProvider messages={messages}>
-          {children}
+          <MotionProvider>
+            {children}
+          </MotionProvider>
         </NextIntlClientProvider>
         <Analytics />
       </body>

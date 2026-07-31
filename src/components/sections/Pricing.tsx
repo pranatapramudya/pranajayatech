@@ -5,11 +5,11 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 import { buttonVariants } from "@/components/ui/button";
 import { Check, Zap } from "lucide-react";
 import { Link } from "@/i18n/routing";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
-const MotionCard = motion.create(Card);
+const MotionCard = m.create(Card);
 
-export function Pricing() {
+export default function Pricing() {
   const t = useTranslations("Pricing");
 
   return (
@@ -17,26 +17,26 @@ export function Pricing() {
       <div className="absolute inset-0 bg-zinc-950/50 -z-10"></div>
       <div className="container mx-auto px-4 sm:px-8 relative">
         <div className="mx-auto max-w-2xl text-center mb-16">
-          <motion.h2 
+          <m.h2 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
+            viewport={{ once: true, margin: "200px" }}
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="text-3xl font-extrabold tracking-tight sm:text-4xl mb-4 text-transparent bg-clip-text bg-gradient-to-br from-zinc-100 via-zinc-400 to-zinc-800 drop-shadow-sm transform-gpu"
             style={{ willChange: "transform, opacity" }}
           >
             {t("title")}
-          </motion.h2>
-          <motion.p 
+          </m.h2>
+          <m.p 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
+            viewport={{ once: true, margin: "200px" }}
             transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
             className="text-lg text-muted-foreground transform-gpu"
             style={{ willChange: "transform, opacity" }}
           >
             {t("subtitle")}
-          </motion.p>
+          </m.p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto items-center">
@@ -45,7 +45,7 @@ export function Pricing() {
             className="bg-slate-900/40 backdrop-blur-md border border-white/10 hover:border-zinc-700 transition-all flex flex-col h-full relative transform-gpu"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
+            viewport={{ once: true, margin: "200px" }}
             transition={{ duration: 0.5 }}
             whileHover={{ y: -5, scale: 1.02, transition: { duration: 0.2 } }}
             style={{ willChange: "transform, opacity" }}
@@ -81,7 +81,7 @@ export function Pricing() {
             className="bg-slate-900/60 backdrop-blur-md border border-blue-500/50 shadow-2xl shadow-blue-500/20 flex flex-col h-full relative overflow-hidden transform-gpu lg:scale-105 z-10"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
+            viewport={{ once: true, margin: "200px" }}
             transition={{ duration: 0.5, delay: 0.1 }}
             whileHover={{ y: -5, scale: 1.05, transition: { duration: 0.2 } }}
             style={{ willChange: "transform, opacity" }}
@@ -123,7 +123,7 @@ export function Pricing() {
             className="bg-slate-900/40 backdrop-blur-md border border-white/10 hover:border-zinc-700 transition-all flex flex-col h-full relative transform-gpu"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
+            viewport={{ once: true, margin: "200px" }}
             transition={{ duration: 0.5, delay: 0.2 }}
             whileHover={{ y: -5, scale: 1.02, transition: { duration: 0.2 } }}
             style={{ willChange: "transform, opacity" }}

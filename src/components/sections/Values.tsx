@@ -2,9 +2,9 @@
 
 import { useTranslations } from "next-intl";
 import { Zap, Server, Smartphone } from "lucide-react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 
-export function Values() {
+export default function Values() {
   const t = useTranslations("Values");
 
   const values = [
@@ -45,12 +45,12 @@ export function Values() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {values.map((val) => (
-            <motion.div 
+            <m.div 
               key={val.id}
               className="bg-slate-900/40 backdrop-blur-sm border border-white/5 rounded-2xl p-8 hover:border-amber-500/30 transition-all duration-300 group transform-gpu"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
+              viewport={{ once: true, margin: "200px" }}
               transition={{ duration: 0.5 }}
               whileHover={{ y: -5, scale: 1.02, transition: { duration: 0.2 } }}
               style={{ willChange: "transform, opacity" }}
@@ -62,7 +62,7 @@ export function Values() {
               <p className="text-sm text-slate-400 leading-relaxed">
                 {val.description}
               </p>
-            </motion.div>
+            </m.div>
           ))}
         </div>
       </div>
