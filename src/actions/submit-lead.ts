@@ -59,13 +59,13 @@ export async function submitLead(formData: FormData) {
       console.log('3. Sending via Resend...');
       if (process.env.RESEND_API_KEY) {
         await resend.emails.send({
-          from: 'Lumea Labs <onboarding@resend.dev>',
+          from: 'Pranajaya Tech <onboarding@resend.dev>',
           to: 'pranatapramudya39@gmail.com',
           subject: `🚨 New B2B Lead: ${data.company ? data.company : data.name}`,
           html: `
             <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; color: #333;">
               <h2 style="color: #0F172A;">🚀 New Project Inquiry</h2>
-              <p>Sistem Lumea Labs baru saja menangkap prospek high-ticket baru.</p>
+              <p>Sistem Pranajaya Tech baru saja menangkap prospek high-ticket baru.</p>
               <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
                 <tr><td style="padding: 8px 0; border-bottom: 1px solid #E2E8F0;"><strong>Name:</strong></td><td style="padding: 8px 0; border-bottom: 1px solid #E2E8F0;">${data.name}</td></tr>
                 <tr><td style="padding: 8px 0; border-bottom: 1px solid #E2E8F0;"><strong>Company:</strong></td><td style="padding: 8px 0; border-bottom: 1px solid #E2E8F0;">${data.company || '-'}</td></tr>

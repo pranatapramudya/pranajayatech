@@ -35,7 +35,7 @@ export function Navbar() {
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center space-x-2" onClick={closeMenu}>
             <span className="font-bold text-xl tracking-tighter text-primary">
-              Lumea<span className="text-foreground">Labs</span>
+              Pranajaya<span className="text-foreground">Tech</span>
             </span>
           </Link>
         </div>
@@ -82,7 +82,7 @@ export function Navbar() {
             <SheetContent side="right" className="bg-[#0B0F19] border-l border-white/5 overflow-y-auto sm:max-w-[320px] w-[85vw] flex flex-col h-full p-6">
               <SheetHeader className="text-left mb-8">
                 <SheetTitle className="font-bold text-xl tracking-tight text-white">
-                  Lumea<span className="text-blue-500">Labs</span>
+                  Pranajaya<span className="text-blue-500">Tech</span>
                 </SheetTitle>
               </SheetHeader>
               

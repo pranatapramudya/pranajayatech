@@ -32,7 +32,7 @@ export default async function Home({
         </div>
       </main>
       <footer className="py-8 text-center text-sm text-muted-foreground border-t border-border/40">
-        <p>&copy; {new Date().getFullYear()} Lumea Labs. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Pranajaya Tech. All rights reserved.</p>
       </footer>
     </>
   );

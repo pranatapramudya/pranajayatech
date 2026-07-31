@@ -28,7 +28,7 @@ export function Hero() {
           >
             <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-primary ring-1 ring-primary/20 hover:ring-primary/40 bg-primary/5 flex items-center gap-2">
               <Terminal className="h-4 w-4" />
-              Lumea Labs System <span className="hidden sm:inline">Online</span>
+              Pranajaya Tech System <span className="hidden sm:inline">Online</span>
             </div>
           </motion.div>
           

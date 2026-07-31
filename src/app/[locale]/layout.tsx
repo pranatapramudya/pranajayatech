@@ -23,10 +23,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Lumea Labs | Premium AI-Augmented Software Agency",
+  title: "Pranajaya Tech | Premium AI-Augmented Software Agency",
   description: "We ship production-ready SaaS in weeks, not months. High-availability architecture meets proprietary AI acceleration.",
   openGraph: {
-    title: "Lumea Labs | Premium AI-Augmented Software Agency",
+    title: "Pranajaya Tech | Premium AI-Augmented Software Agency",
     description: "We ship production-ready SaaS in weeks, not months.",
     type: "website",
   }
