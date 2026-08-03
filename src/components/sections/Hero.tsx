@@ -28,9 +28,12 @@ export function Hero() {
             className="mb-8 flex justify-center transform-gpu will-change-transform"
             style={{ willChange: "transform, opacity" }}
           >
-            <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-primary ring-1 ring-primary/20 hover:ring-primary/40 bg-primary/5 flex items-center gap-2">
-              <Terminal className="h-4 w-4" />
-              Pranajaya Tech System <span className="hidden sm:inline">Online</span>
+            <div className="relative inline-flex overflow-hidden rounded-full p-[1px]">
+              <span className="absolute inset-[-1000%] animate-spin-slow bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#E2B875_50%,transparent_100%)]" />
+              <div className="inline-flex cursor-pointer items-center justify-center rounded-full bg-slate-950 px-3 py-1 text-sm leading-6 font-medium text-primary backdrop-blur-3xl gap-2">
+                <Terminal className="h-4 w-4" />
+                Pranajaya Tech System <span className="hidden sm:inline">Online</span>
+              </div>
             </div>
           </m.div>
           
