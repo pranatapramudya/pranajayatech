@@ -6,11 +6,13 @@ import { buttonVariants } from "@/components/ui/button";
 import { Check, Zap } from "lucide-react";
 import { Link } from "@/i18n/routing";
 import { m } from "framer-motion";
+import { useMobile } from "@/hooks/use-mobile";
 
 const MotionCard = m.create(Card);
 
 export default function Pricing() {
   const t = useTranslations("Pricing");
+  const isMobile = useMobile();
 
   return (
     <section id="pricing" className="py-24 sm:py-32 relative">
@@ -18,20 +20,20 @@ export default function Pricing() {
       <div className="container mx-auto px-4 sm:px-8 relative">
         <div className="mx-auto max-w-2xl text-center mb-16">
           <m.h2 
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: isMobile ? 0 : 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "200px" }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
+            viewport={{ once: true, margin: "100px" }}
+            transition={{ duration: 0.25, ease: "easeOut" }}
             className="text-3xl font-extrabold tracking-tight sm:text-4xl mb-4 text-transparent bg-clip-text bg-gradient-to-br from-zinc-100 via-zinc-400 to-zinc-800 drop-shadow-sm transform-gpu"
             style={{ willChange: "transform, opacity" }}
           >
             {t("title")}
           </m.h2>
           <m.p 
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: isMobile ? 0 : 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "200px" }}
-            transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+            viewport={{ once: true, margin: "100px" }}
+            transition={{ duration: 0.25, ease: "easeOut" }}
             className="text-lg text-muted-foreground transform-gpu"
             style={{ willChange: "transform, opacity" }}
           >
@@ -42,12 +44,12 @@ export default function Pricing() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto items-center">
           {/* Tier 1 */}
           <MotionCard 
-            className="bg-slate-900/40 backdrop-blur-md border border-white/10 hover:border-zinc-700 transition-all flex flex-col h-full relative transform-gpu"
-            initial={{ opacity: 0, y: 30 }}
+            className="bg-slate-900/90 md:bg-slate-900/40 md:backdrop-blur-md border border-white/10 hover:border-zinc-700 transition-all flex flex-col h-full relative transform-gpu"
+            initial={{ opacity: 0, y: isMobile ? 0 : 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "200px" }}
-            transition={{ duration: 0.5 }}
-            whileHover={{ y: -5, scale: 1.02, transition: { duration: 0.2 } }}
+            viewport={{ once: true, margin: "100px" }}
+            transition={{ duration: 0.25, ease: "easeOut" }}
+            whileHover={isMobile ? undefined : { y: -5, scale: 1.02, transition: { duration: 0.2 } }}
             style={{ willChange: "transform, opacity" }}
           >
             <CardHeader className="text-center pb-8 pt-10">
@@ -78,12 +80,12 @@ export default function Pricing() {
 
           {/* Tier 2 (Premium) */}
           <MotionCard 
-            className="bg-slate-900/60 backdrop-blur-md border border-blue-500/50 shadow-2xl shadow-blue-500/20 flex flex-col h-full relative overflow-hidden transform-gpu lg:scale-105 z-10"
-            initial={{ opacity: 0, y: 30 }}
+            className="bg-slate-900/95 md:bg-slate-900/60 md:backdrop-blur-md border border-blue-500/50 shadow-lg md:shadow-2xl md:shadow-blue-500/20 flex flex-col h-full relative overflow-hidden transform-gpu lg:scale-105 z-10"
+            initial={{ opacity: 0, y: isMobile ? 0 : 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "200px" }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            whileHover={{ y: -5, scale: 1.05, transition: { duration: 0.2 } }}
+            viewport={{ once: true, margin: "100px" }}
+            transition={{ duration: 0.25, ease: "easeOut" }}
+            whileHover={isMobile ? undefined : { y: -5, scale: 1.05, transition: { duration: 0.2 } }}
             style={{ willChange: "transform, opacity" }}
           >
             <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-blue-500 to-transparent"></div>
@@ -120,12 +122,12 @@ export default function Pricing() {
 
           {/* Tier 3 */}
           <MotionCard 
-            className="bg-slate-900/40 backdrop-blur-md border border-white/10 hover:border-zinc-700 transition-all flex flex-col h-full relative transform-gpu"
-            initial={{ opacity: 0, y: 30 }}
+            className="bg-slate-900/90 md:bg-slate-900/40 md:backdrop-blur-md border border-white/10 hover:border-zinc-700 transition-all flex flex-col h-full relative transform-gpu"
+            initial={{ opacity: 0, y: isMobile ? 0 : 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "200px" }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            whileHover={{ y: -5, scale: 1.02, transition: { duration: 0.2 } }}
+            viewport={{ once: true, margin: "100px" }}
+            transition={{ duration: 0.25, ease: "easeOut" }}
+            whileHover={isMobile ? undefined : { y: -5, scale: 1.02, transition: { duration: 0.2 } }}
             style={{ willChange: "transform, opacity" }}
           >
             <CardHeader className="text-center pb-8 pt-10">

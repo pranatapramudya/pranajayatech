@@ -34,3 +34,12 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Performance & Mobile Optimizations
+
+Recent production improvements have been made to achieve solid 60fps scrolling and instant responsiveness, particularly on mobile viewports:
+
+- **Paint Bottleneck Removal:** Stripped heavy `backdrop-blur` and multi-layered glow effects on mobile viewports to prevent composite layer thrashing and achieve fluid 60fps scrolling performance.
+- **Snappy Transitions:** Standardized all Framer Motion entrance animations to an instantaneous `duration: 0.25, ease: "easeOut"` profile with zero micro-delays for true instant responsiveness as you scroll.
+- **Mobile UI Fixes:** Fixed the mobile Hero CTA button layouts ("Book a Consultation" and "View Portfolio") to be perfectly centered, uniformly proportioned, and neatly stacked to prevent awkward width stretching.
+- **GPU Acceleration:** Enforced explicit GPU layer promotion (`transform-gpu`, `will-change: transform, opacity`) across all animated components to offload heavy calculations to the graphics processor before scroll occurs.

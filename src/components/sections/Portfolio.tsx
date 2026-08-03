@@ -5,11 +5,13 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { buttonVariants } from "@/components/ui/button";
 import { ExternalLink, Code2, LineChart, HeartPulse, ShoppingBag } from "lucide-react";
 import { m } from "framer-motion";
+import { useMobile } from "@/hooks/use-mobile";
 
 const MotionCard = m.create(Card);
 
 export default function Portfolio() {
   const t = useTranslations("Portfolio");
+  const isMobile = useMobile();
 
   return (
     <section id="portfolio" className="py-24 sm:py-32 bg-zinc-950">
@@ -56,12 +58,12 @@ export default function Portfolio() {
           ].map((project) => (
             <MotionCard 
               key={project.id} 
-              className="bg-slate-900/40 backdrop-blur-md border border-white/10 transition-colors flex flex-col h-full overflow-hidden group transform-gpu"
-              initial={{ opacity: 0, y: 30 }}
+              className="bg-slate-900/90 md:bg-slate-900/40 md:backdrop-blur-md border border-white/10 transition-colors flex flex-col h-full overflow-hidden group transform-gpu"
+              initial={{ opacity: 0, y: isMobile ? 0 : 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "200px" }}
-              transition={{ duration: 0.5 }}
-              whileHover={{ y: -5, scale: 1.02, transition: { duration: 0.2 } }}
+              viewport={{ once: true, margin: "100px" }}
+              transition={{ duration: 0.25, ease: "easeOut" }}
+              whileHover={isMobile ? undefined : { y: -5, scale: 1.02, transition: { duration: 0.2 } }}
               style={{ willChange: "transform, opacity" }}
             >
               <div className={`h-2 w-full bg-gradient-to-r ${project.gradient} to-transparent opacity-50 group-hover:opacity-100 transition-opacity`}></div>

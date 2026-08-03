@@ -44,7 +44,7 @@ export default function Booking() {
   return (
     <section id="contact" className="py-24 sm:py-32 relative bg-background overflow-hidden">
       {/* Background Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-3xl pointer-events-none transform-gpu"></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-3xl hidden md:block pointer-events-none transform-gpu"></div>
       
       <div className="container mx-auto px-4 sm:px-8 relative z-10">
         <div className="mx-auto max-w-2xl text-center mb-16">
@@ -56,9 +56,9 @@ export default function Booking() {
           </p>
         </div>
 
-        <div className="bg-slate-900/40 backdrop-blur-md border border-white/10 rounded-3xl p-8 md:p-12 max-w-4xl mx-auto shadow-2xl relative overflow-hidden">
+        <div className="bg-slate-900/90 md:bg-slate-900/40 md:backdrop-blur-md border border-white/10 rounded-3xl p-8 md:p-12 max-w-4xl mx-auto shadow-lg md:shadow-2xl relative overflow-hidden">
           {success && (
-            <div className="absolute inset-0 bg-slate-900/95 backdrop-blur-md z-20 flex flex-col items-center justify-center text-center p-8">
+            <div className="absolute inset-0 bg-slate-900/95 md:backdrop-blur-md z-20 flex flex-col items-center justify-center text-center p-8">
               <div className="w-20 h-20 bg-blue-500/10 rounded-full flex items-center justify-center mb-6">
                 <CheckCircle2 className="w-10 h-10 text-blue-500" />
               </div>
