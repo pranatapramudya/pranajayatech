@@ -43,3 +43,10 @@ Recent production improvements have been made to achieve solid 60fps scrolling a
 - **Snappy Transitions:** Standardized all Framer Motion entrance animations to an instantaneous `duration: 0.25, ease: "easeOut"` profile with zero micro-delays for true instant responsiveness as you scroll.
 - **Mobile UI Fixes:** Fixed the mobile Hero CTA button layouts ("Book a Consultation" and "View Portfolio") to be perfectly centered, uniformly proportioned, and neatly stacked to prevent awkward width stretching.
 - **GPU Acceleration:** Enforced explicit GPU layer promotion (`transform-gpu`, `will-change: transform, opacity`) across all animated components to offload heavy calculations to the graphics processor before scroll occurs.
+
+## Localization & Internationalization (i18n)
+
+We have implemented a robust localization system using `next-intl` to serve both local and global audiences seamlessly:
+
+- **Smart Locale Auto-Detection:** Configured `next-intl` middleware with `localeDetection: true` and `localePrefix: 'always'` to automatically route Indonesian browser preferences/traffic to `/id` and global/international traffic to `/en`.
+- **Persistent Manual Language Switcher:** Added a 1-year cookie persistence (`NEXT_LOCALE`) via the navigation toggle to remember manual user preferences across visits, ensuring their language choice is respected on all subsequent page loads.

@@ -90,6 +90,18 @@
   },
   "Booking": {
     "title": "Konversi Tanpa Hambatan",
-    "subtitle": "Siap untuk membangun? Jadwalkan panggilan penemuan langsung dengan insinyur utama kami."
+    "subtitle": "Siap untuk membangun? Jadwalkan panggilan penemuan langsung dengan insinyur utama kami.",
+    "nameLabel": "Nama Anda",
+    "namePlaceholder": "Budi Santoso",
+    "companyLabel": "Perusahaan",
+    "companyPlaceholder": "PT Maju Mundur",
+    "phoneLabel": "Nomor Telepon",
+    "phonePlaceholder": "+62 812 3456 7890",
+    "emailLabel": "Email",
+    "emailPlaceholder": "budi@example.com",
+    "messageLabel": "Detail Proyek",
+    "messagePlaceholder": "Ceritakan tentang proyek Anda, jadwal, dan tujuan...",
+    "sendButton": "Kirim",
+    "processing": "Memproses..."
   }
 }

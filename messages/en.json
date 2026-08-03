@@ -94,6 +94,18 @@
   },
   "Booking": {
     "title": "Seamless Conversion",
-    "subtitle": "Ready to build? Schedule a discovery call directly with our lead engineers."
+    "subtitle": "Ready to build? Schedule a discovery call directly with our lead engineers.",
+    "nameLabel": "Your Name",
+    "namePlaceholder": "John Doe",
+    "companyLabel": "Company",
+    "companyPlaceholder": "Acme Corp",
+    "phoneLabel": "Phone Number",
+    "phonePlaceholder": "+1 (555) 000-0000",
+    "emailLabel": "Email",
+    "emailPlaceholder": "john@example.com",
+    "messageLabel": "Project Details",
+    "messagePlaceholder": "Tell us about your project, timeline, and goals...",
+    "sendButton": "Send",
+    "processing": "Processing..."
   }
 }

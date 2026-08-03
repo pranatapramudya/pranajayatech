@@ -24,6 +24,7 @@ export function Navbar() {
 
   const toggleLocale = () => {
     const newLocale = locale === "en" ? "id" : "en";
+    document.cookie = `NEXT_LOCALE=${newLocale}; path=/; max-age=31536000; SameSite=Lax`;
     router.replace(pathname, { locale: newLocale });
   };
 

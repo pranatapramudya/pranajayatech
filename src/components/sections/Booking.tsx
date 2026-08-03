@@ -56,7 +56,7 @@ export default function Booking() {
           </p>
         </div>
 
-        <div className="bg-slate-900/90 md:bg-slate-900/40 md:backdrop-blur-md border border-white/10 rounded-3xl p-8 md:p-12 max-w-4xl mx-auto shadow-lg md:shadow-2xl relative overflow-hidden">
+        <div className="max-w-4xl mx-auto relative overflow-hidden">
           {success && (
             <div className="absolute inset-0 bg-slate-900/95 md:backdrop-blur-md z-20 flex flex-col items-center justify-center text-center p-8">
               <div className="w-20 h-20 bg-blue-500/10 rounded-full flex items-center justify-center mb-6">
@@ -83,23 +83,23 @@ export default function Booking() {
             )}
             <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <label htmlFor="name" className="text-sm font-medium text-slate-300 mb-2 block">Your Name</label>
+                <label htmlFor="name" className="text-sm font-medium text-slate-300 mb-2 block">{t("nameLabel")}</label>
                 <input 
                   type="text" 
                   id="name" 
                   name="name"
-                  placeholder="John Doe" 
+                  placeholder={t("namePlaceholder")} 
                   className="w-full bg-slate-950/50 border border-slate-800 rounded-xl px-4 py-3 text-slate-100 placeholder:text-slate-600 focus:outline-none focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/50 transition-all"
                   required
                 />
               </div>
               <div>
-                <label htmlFor="company" className="text-sm font-medium text-slate-300 mb-2 block">Company</label>
+                <label htmlFor="company" className="text-sm font-medium text-slate-300 mb-2 block">{t("companyLabel")}</label>
                 <input 
                   type="text" 
                   id="company" 
                   name="company"
-                  placeholder="Acme Corp" 
+                  placeholder={t("companyPlaceholder")} 
                   className="w-full bg-slate-950/50 border border-slate-800 rounded-xl px-4 py-3 text-slate-100 placeholder:text-slate-600 focus:outline-none focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/50 transition-all"
                 />
               </div>
@@ -107,22 +107,22 @@ export default function Booking() {
 
             <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <label htmlFor="phone" className="text-sm font-medium text-slate-300 mb-2 block">Phone Number</label>
+                <label htmlFor="phone" className="text-sm font-medium text-slate-300 mb-2 block">{t("phoneLabel")}</label>
                 <input 
                   type="tel" 
                   id="phone" 
                   name="phone"
-                  placeholder="+1 (555) 000-0000" 
+                  placeholder={t("phonePlaceholder")} 
                   className="w-full bg-slate-950/50 border border-slate-800 rounded-xl px-4 py-3 text-slate-100 placeholder:text-slate-600 focus:outline-none focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/50 transition-all"
                 />
               </div>
               <div>
-                <label htmlFor="email" className="text-sm font-medium text-slate-300 mb-2 block">Email</label>
+                <label htmlFor="email" className="text-sm font-medium text-slate-300 mb-2 block">{t("emailLabel")}</label>
                 <input 
                   type="email" 
                   id="email" 
                   name="email"
-                  placeholder="john@example.com" 
+                  placeholder={t("emailPlaceholder")} 
                   className="w-full bg-slate-950/50 border border-slate-800 rounded-xl px-4 py-3 text-slate-100 placeholder:text-slate-600 focus:outline-none focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/50 transition-all"
                   required
                 />
@@ -130,12 +130,12 @@ export default function Booking() {
             </div>
 
             <div>
-              <label htmlFor="details" className="text-sm font-medium text-slate-300 mb-2 block">Project Details</label>
+              <label htmlFor="details" className="text-sm font-medium text-slate-300 mb-2 block">{t("messageLabel")}</label>
               <textarea 
                 id="details" 
                 name="projectDetails"
                 rows={4} 
-                placeholder="Tell us about your project, timeline, and goals..." 
+                placeholder={t("messagePlaceholder")} 
                 className="w-full bg-slate-950/50 border border-slate-800 rounded-xl px-4 py-3 text-slate-100 placeholder:text-slate-600 focus:outline-none focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/50 transition-all resize-y"
                 required
               ></textarea>
@@ -156,8 +156,8 @@ export default function Booking() {
               disabled={isLoading || !token}
               className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-semibold py-4 px-10 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_-10px_rgba(79,70,229,0.5)] flex items-center justify-center gap-2 mt-8 mx-auto disabled:opacity-70 disabled:cursor-not-allowed border-0"
             >
-              {isLoading ? "Processing..." : (
-                <>Send <ArrowUpRight className="w-5 h-5" /></>
+              {isLoading ? t("processing") : (
+                <>{t("sendButton")} <ArrowUpRight className="w-5 h-5" /></>
               )}
             </button>
           </form>
