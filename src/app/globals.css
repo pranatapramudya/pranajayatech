@@ -93,4 +93,9 @@
     @apply font-sans;
     color-scheme: dark;
   }
+  
+  /* OPTIMIZATION: Eliminate 300ms tap delay on mobile devices */
+  button, a, input, [role="button"] {
+    touch-action: manipulation;
+  }
 }

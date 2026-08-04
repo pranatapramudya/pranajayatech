@@ -15,7 +15,7 @@ export default function Pricing() {
   const isMobile = useMobile();
 
   return (
-    <section id="pricing" className="py-24 sm:py-32 relative">
+    <section id="pricing" className="py-24 sm:py-32 relative" style={{ contain: "paint layout" }}>
       <div className="absolute inset-0 bg-zinc-950/50 -z-10"></div>
       <div className="container mx-auto px-4 sm:px-8 relative">
         <div className="mx-auto max-w-2xl text-center mb-16">
@@ -44,7 +44,7 @@ export default function Pricing() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto items-center">
           {/* Tier 1 */}
           <MotionCard 
-            className="bg-slate-900/90 md:bg-slate-900/40 md:backdrop-blur-md border border-white/10 hover:border-zinc-700 transition-all flex flex-col h-full relative transform-gpu"
+            className="bg-slate-900/90 border border-white/10 hover:border-zinc-700 transition-all flex flex-col h-full relative transform-gpu"
             initial={{ opacity: 0, y: isMobile ? 0 : 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "100px" }}
@@ -80,7 +80,7 @@ export default function Pricing() {
 
           {/* Tier 2 (Premium) */}
           <MotionCard 
-            className="bg-slate-900/95 md:bg-slate-900/60 md:backdrop-blur-md border border-blue-500/50 shadow-lg md:shadow-2xl md:shadow-blue-500/20 flex flex-col h-full relative overflow-hidden transform-gpu lg:scale-105 z-10"
+            className="bg-slate-900/95 border border-blue-500/50 shadow-lg md:shadow-2xl md:shadow-blue-500/20 flex flex-col h-full relative overflow-hidden transform-gpu lg:scale-105 z-10"
             initial={{ opacity: 0, y: isMobile ? 0 : 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "100px" }}
@@ -122,7 +122,7 @@ export default function Pricing() {
 
           {/* Tier 3 */}
           <MotionCard 
-            className="bg-slate-900/90 md:bg-slate-900/40 md:backdrop-blur-md border border-white/10 hover:border-zinc-700 transition-all flex flex-col h-full relative transform-gpu"
+            className="bg-slate-900/90 border border-white/10 hover:border-zinc-700 transition-all flex flex-col h-full relative transform-gpu"
             initial={{ opacity: 0, y: isMobile ? 0 : 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "100px" }}

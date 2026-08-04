@@ -31,7 +31,7 @@ export default function Values() {
   ];
 
   return (
-    <section id="values" className="py-24 sm:py-32 bg-background relative overflow-hidden">
+    <section id="values" className="py-24 sm:py-32 bg-background relative overflow-hidden" style={{ contain: "paint layout" }}>
       {/* subtle gradient background */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/5 rounded-full blur-[100px] hidden md:block pointer-events-none transform-gpu"></div>
 
@@ -49,7 +49,7 @@ export default function Values() {
           {values.map((val) => (
             <m.div 
               key={val.id}
-              className="bg-slate-900/90 md:bg-slate-900/40 md:backdrop-blur-sm border border-white/5 rounded-2xl p-8 hover:border-amber-500/30 transition-all duration-300 group transform-gpu"
+              className="bg-slate-900/90 border border-white/5 rounded-2xl p-8 hover:border-amber-500/30 transition-all duration-300 group transform-gpu"
               initial={{ opacity: 0, y: isMobile ? 0 : 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "100px" }}

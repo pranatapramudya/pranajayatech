@@ -14,38 +14,48 @@ export default function Booking() {
   const [token, setToken] = useState<string | null>(null);
   const [turnstileKey, setTurnstileKey] = useState(0);
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const [isPending, startTransition] = useTransition();
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!token) {
       setError("Please complete the security check.");
       return;
     }
+
+    // 1. OPTIMISTIC UI UPDATE - Instantly show success state
+    setError(null);
+    setSuccess(true);
+    
+    // Save form data and element for background process
     const formData = new FormData(e.currentTarget);
     formData.append("turnstileToken", token);
-    setError(null);
-    setSuccess(false);
-    setIsLoading(true);
+    const formElement = e.target as HTMLFormElement;
 
-    try {
-      const res = await submitLead(formData);
-      if (res.success) {
-        setSuccess(true);
-        (e.target as HTMLFormElement).reset();
-        setToken(null);
-        setTurnstileKey(prev => prev + 1);
-      } else {
-        setError(res.error || "An error occurred");
+    // 2. BACKGROUND PROCESS
+    startTransition(async () => {
+      try {
+        const res = await submitLead(formData);
+        if (res.success) {
+          formElement.reset();
+          setToken(null);
+          setTurnstileKey(prev => prev + 1);
+        } else {
+          // ROLLBACK ON ERROR
+          setSuccess(false);
+          setError(res.error || "An error occurred");
+        }
+      } catch (err: any) {
+        // ROLLBACK ON ERROR
+        setSuccess(false);
+        setError(err?.message || "An unexpected error occurred");
       }
-    } catch (err: any) {
-      setError(err?.message || "An unexpected error occurred");
-    } finally {
-      setIsLoading(false);
-    }
+    });
   };
 
 
   return (
-    <section id="contact" className="py-24 sm:py-32 relative bg-background overflow-hidden">
+    <section id="contact" className="py-24 sm:py-32 relative bg-background overflow-hidden" style={{ contain: "paint layout" }}>
       {/* Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-3xl hidden md:block pointer-events-none transform-gpu"></div>
       
@@ -156,10 +166,11 @@ export default function Booking() {
 
             <button 
               type="submit" 
-              disabled={isLoading || !token}
-              className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-semibold py-4 px-10 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_-10px_rgba(79,70,229,0.5)] flex items-center justify-center gap-2 mt-8 mx-auto disabled:opacity-70 disabled:cursor-not-allowed border-0"
+              disabled={isLoading || isPending || !token}
+              className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-semibold py-4 px-10 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_-10px_rgba(79,70,229,0.5)] flex items-center justify-center gap-2 mt-8 mx-auto disabled:opacity-70 disabled:cursor-not-allowed border-0 transform-gpu"
+              style={{ willChange: "transform, opacity" }}
             >
-              {isLoading ? t("processing") : (
+              {(isLoading || isPending) ? t("processing") : (
                 <>{t("sendButton")} <ArrowUpRight className="w-5 h-5" /></>
               )}
             </button>

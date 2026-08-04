@@ -14,7 +14,7 @@ export default function Portfolio() {
   const isMobile = useMobile();
 
   return (
-    <section id="portfolio" className="py-24 sm:py-32 bg-zinc-950">
+    <section id="portfolio" className="py-24 sm:py-32 bg-zinc-950" style={{ contain: "paint layout" }}>
       <div className="container mx-auto px-4 sm:px-8">
         <div className="mx-auto max-w-2xl text-center mb-16">
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
@@ -58,7 +58,7 @@ export default function Portfolio() {
           ].map((project) => (
             <MotionCard 
               key={project.id} 
-              className="bg-slate-900/90 md:bg-slate-900/40 md:backdrop-blur-md border border-white/10 transition-colors flex flex-col h-full overflow-hidden group transform-gpu"
+              className="bg-slate-900/90 border border-white/10 transition-colors flex flex-col h-full overflow-hidden group transform-gpu"
               initial={{ opacity: 0, y: isMobile ? 0 : 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "100px" }}

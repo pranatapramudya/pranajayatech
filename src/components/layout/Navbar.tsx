@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, startTransition } from "react";
 import { useTranslations } from "next-intl";
 import { Link, usePathname, useRouter } from "@/i18n/routing";
 import { Button, buttonVariants } from "@/components/ui/button";
@@ -21,17 +21,34 @@ export function Navbar() {
   const params = useParams();
   const locale = params.locale as string;
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const toggleLocale = () => {
-    const newLocale = locale === "en" ? "id" : "en";
-    document.cookie = `NEXT_LOCALE=${newLocale}; path=/; max-age=31536000; SameSite=Lax`;
-    router.replace(pathname, { locale: newLocale });
+    startTransition(() => {
+      const newLocale = locale === "en" ? "id" : "en";
+      document.cookie = `NEXT_LOCALE=${newLocale}; path=/; max-age=31536000; SameSite=Lax`;
+      router.replace(pathname, { locale: newLocale });
+    });
   };
 
   const closeMenu = () => setIsOpen(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 md:backdrop-blur md:supports-[backdrop-filter]:bg-background/60">
+    <header className={`sticky top-0 z-50 w-full border-b transition-all duration-300 transform-gpu ${
+      isScrolled 
+        ? "border-border/40 bg-background/95 md:backdrop-blur md:supports-[backdrop-filter]:bg-background/60" 
+        : "border-transparent bg-transparent"
+    }`}>
       <div className="container mx-auto flex h-16 items-center justify-between px-4 sm:px-8">
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center space-x-2" onClick={closeMenu}>
@@ -68,7 +85,10 @@ export function Navbar() {
 
           <button 
             onClick={toggleLocale}
-            className="text-xs sm:text-sm font-semibold tracking-wider text-muted-foreground hover:text-primary transition-colors flex items-center gap-1 bg-zinc-900/50 px-2 sm:px-3 py-1.5 rounded-md border border-zinc-800"
+            onMouseEnter={() => router.prefetch(pathname, { locale: locale === "en" ? "id" : "en" })}
+            onPointerDown={() => router.prefetch(pathname, { locale: locale === "en" ? "id" : "en" })}
+            className="text-xs sm:text-sm font-semibold tracking-wider text-muted-foreground hover:text-primary transition-colors flex items-center gap-1 bg-zinc-900/50 px-2 sm:px-3 py-1.5 rounded-md border border-zinc-800 transform-gpu"
+            style={{ willChange: "transform, opacity" }}
           >
             <span className={locale === 'en' ? "text-primary" : ""}>EN</span>
             <span className="opacity-50">/</span>
