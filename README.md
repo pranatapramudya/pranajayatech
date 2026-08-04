@@ -50,3 +50,11 @@ We have implemented a robust localization system using `next-intl` to serve both
 
 - **Smart Locale Auto-Detection:** Configured `next-intl` middleware with `localeDetection: true` and `localePrefix: 'always'` to automatically route Indonesian browser preferences/traffic to `/id` and global/international traffic to `/en`.
 - **Persistent Manual Language Switcher:** Added a 1-year cookie persistence (`NEXT_LOCALE`) via the navigation toggle to remember manual user preferences across visits, ensuring their language choice is respected on all subsequent page loads.
+
+## Lead Capture & Security
+
+We have implemented a secure and reliable backend for capturing incoming client leads:
+
+- **Anti-Spam Protection:** Integrated **Cloudflare Turnstile** on all contact forms to block automated bot submissions and ensure high-quality lead generation without compromising user experience.
+- **Reliable Email Notifications:** Implemented **Resend** for instant email notifications directly to our team inbox (`pranatapramudya39@gmail.com`) with properly formatted HTML templates summarizing client inquiries.
+- **Secure Infrastructure:** DNS configurations optimized through Cloudflare for fast, secure delivery and verified domain sender authenticity for email routing.

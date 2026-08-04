@@ -59,8 +59,9 @@ export async function submitLead(formData: FormData) {
       console.log('3. Sending via Resend...');
       if (process.env.RESEND_API_KEY) {
         await resend.emails.send({
-          from: 'Pranajaya Tech <onboarding@resend.dev>',
+          from: 'Pranajaya Tech <hello@pranajayatech.online>',
           to: 'pranatapramudya39@gmail.com',
+          replyTo: data.email,
           subject: `🚨 New B2B Lead: ${data.company ? data.company : data.name}`,
           html: `
             <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; color: #333;">
@@ -82,7 +83,7 @@ export async function submitLead(formData: FormData) {
       }
     } catch (emailError) {
       console.error("Email notification failed:", emailError);
-      // Proceed anyway
+      return { success: false, error: 'Pesan berhasil disimpan, namun gagal mengirim notifikasi email. Silakan coba lagi.' };
     }
 
     // 5. Return success

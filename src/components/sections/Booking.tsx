@@ -12,6 +12,7 @@ export default function Booking() {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [token, setToken] = useState<string | null>(null);
+  const [turnstileKey, setTurnstileKey] = useState(0);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -30,6 +31,8 @@ export default function Booking() {
       if (res.success) {
         setSuccess(true);
         (e.target as HTMLFormElement).reset();
+        setToken(null);
+        setTurnstileKey(prev => prev + 1);
       } else {
         setError(res.error || "An error occurred");
       }
@@ -143,7 +146,7 @@ export default function Booking() {
 
             <div className="flex justify-center mt-6">
               {process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ? (
-                <Turnstile siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY} onSuccess={setToken} />
+                <Turnstile key={turnstileKey} siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY} onSuccess={setToken} />
               ) : (
                 <div className="text-amber-500 bg-amber-500/10 border border-amber-500/50 p-4 rounded-xl text-sm">
                   Turnstile security key is missing. Form submission disabled.
