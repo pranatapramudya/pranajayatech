@@ -7,31 +7,70 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { Analytics } from "@vercel/analytics/next";
 import { MotionProvider } from "@/components/providers/MotionProvider";
+import { JsonLd } from "@/components/seo/JsonLd";
 
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap",
 });
 
-export const metadata: Metadata = {
-  title: "Pranajaya Tech | Premium AI-Augmented Software Agency",
-  description: "We ship production-ready SaaS in weeks, not months. High-availability architecture meets proprietary AI acceleration.",
-  openGraph: {
-    title: "Pranajaya Tech | Premium AI-Augmented Software Agency",
-    description: "We ship production-ready SaaS in weeks, not months.",
-    type: "website",
-  }
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const baseUrl = "https://www.pranajayatech.online";
+
+  const isId = locale === 'id';
+
+  const title = isId 
+    ? "PranajayaTech | Software House & Jasa Pembuatan Website B2B/B2C" 
+    : "PranajayaTech | Custom Web, SaaS & E-Commerce Agency";
+
+  const description = isId 
+    ? "PranajayaTech adalah Software House dari Sumedang, Indonesia. Kami membantu digitalisasi bisnis Anda melalui pembuatan website custom, e-commerce toko online, hingga aplikasi manajemen B2B dan B2C siap pakai."
+    : "PranajayaTech is a premium software agency based in Indonesia. We build custom web applications, consumer e-commerce platforms, and ship production-ready premium SaaS boilerplates in weeks.";
+
+  const keywords = isId
+    ? ["Software House Sumedang", "Jasa Pembuatan Website", "Jasa Pembuatan Aplikasi Bisnis", "Sistem Kasir Otomatis", "Digitalisasi UMKM", "Web Developer Indonesia", "E-Commerce Development", "B2C Applications", "Toko Online", "Retail Tech"]
+    : ["Premium SaaS Boilerplate", "Next.js SaaS Template", "Custom Web Development Indonesia", "B2B Software Agency", "High-Availability Cloud Native", "E-Commerce Development", "B2C Applications", "Toko Online", "Retail Tech"];
+
+  return {
+    title,
+    description,
+    keywords,
+    metadataBase: new URL(baseUrl),
+    alternates: {
+      canonical: `/${locale}`,
+      languages: {
+        'en': '/en',
+        'id': '/id',
+      },
+    },
+    openGraph: {
+      title,
+      description,
+      type: "website",
+      url: `${baseUrl}/${locale}`,
+      siteName: "Pranajaya Tech",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+    },
+  };
+}
 
 export default async function RootLayout({
   children,
@@ -67,6 +106,7 @@ export default async function RootLayout({
           </MotionProvider>
         </NextIntlClientProvider>
         <Analytics />
+        <JsonLd />
       </body>
     </html>
   );

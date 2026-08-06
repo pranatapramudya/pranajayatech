@@ -2,6 +2,7 @@
   "Navigation": {
     "home": "Beranda",
     "portfolio": "Portofolio",
+    "workflow": "Alur Kerja",
     "pricing": "Harga",
     "values": "Values",
     "book": "Jadwalkan Konsultasi",
@@ -103,5 +104,19 @@
     "messagePlaceholder": "Ceritakan tentang proyek Anda, jadwal, dan tujuan...",
     "sendButton": "Kirim",
     "processing": "Memproses..."
+  },
+  "Workflow": {
+    "title": "Alur Kerja",
+    "subtitle": "Bagaimana kami mengubah ide brilian Anda menjadi produk siap pakai.",
+    "step1_title": "Konsultasi",
+    "step1_desc": "Bedah masalah & kebutuhan bisnis Anda.",
+    "step2_title": "Deal & DP",
+    "step2_desc": "Kesepakatan harga & timeline transparan.",
+    "step3_title": "Development",
+    "step3_desc": "Eksekusi kode dengan standar industri.",
+    "step4_title": "Phase Testing",
+    "step4_desc": "Testing terlebih dahulu secara private dengan konsumen.",
+    "step5_title": "Go Live Dan Pelunasan",
+    "step5_desc": "Sistem selesai dan siap digunakan!"
   }
 }

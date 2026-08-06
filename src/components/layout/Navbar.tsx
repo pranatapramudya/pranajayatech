@@ -11,7 +11,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { Menu, FolderOpen, Layers, CreditCard, Home } from "lucide-react";
+import { Menu, FolderOpen, Layers, CreditCard, Home, Activity } from "lucide-react";
 import { useParams } from "next/navigation";
 
 export function Navbar() {
@@ -68,6 +68,9 @@ export function Navbar() {
           <Link href="#portfolio" className="transition-colors hover:text-foreground">
             {t("portfolio")}
           </Link>
+          <Link href="#workflow" className="transition-colors hover:text-foreground">
+            {t("workflow")}
+          </Link>
           <Link href="#pricing" className="transition-colors hover:text-foreground">
             {t("pricing")}
           </Link>
@@ -119,6 +122,10 @@ export function Navbar() {
                 <Link href="#portfolio" onClick={closeMenu} className="flex items-center gap-3 py-3 px-3 text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-200">
                   <FolderOpen className="w-5 h-5" />
                   <span className="font-medium text-base">{t("portfolio")}</span>
+                </Link>
+                <Link href="#workflow" onClick={closeMenu} className="flex items-center gap-3 py-3 px-3 text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-200">
+                  <Activity className="w-5 h-5" />
+                  <span className="font-medium text-base">{t("workflow")}</span>
                 </Link>
                 <Link href="#pricing" onClick={closeMenu} className="flex items-center gap-3 py-3 px-3 text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-200">
                   <CreditCard className="w-5 h-5" />

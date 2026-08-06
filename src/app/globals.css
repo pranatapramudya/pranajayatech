@@ -44,6 +44,7 @@
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
   --animate-spin-slow: spin 4s linear infinite;
+  --animate-fade-in-up: fade-in-up 0.5s ease-out forwards;
 }
 
 :root {
@@ -97,5 +98,16 @@
   /* OPTIMIZATION: Eliminate 300ms tap delay on mobile devices */
   button, a, input, [role="button"] {
     touch-action: manipulation;
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

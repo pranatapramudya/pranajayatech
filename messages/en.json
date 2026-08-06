@@ -2,6 +2,7 @@
   "Navigation": {
     "home": "Home",
     "portfolio": "Portfolio",
+    "workflow": "Workflow",
     "pricing": "Pricing",
     "values": "Values",
     "book": "Book a Call",
@@ -107,5 +108,19 @@
     "messagePlaceholder": "Tell us about your project, timeline, and goals...",
     "sendButton": "Send",
     "processing": "Processing..."
+  },
+  "Workflow": {
+    "title": "How We Build",
+    "subtitle": "Our streamlined process to turn your vision into a production-ready product.",
+    "step1_title": "Consultation",
+    "step1_desc": "Deep dive into your business problems and needs.",
+    "step2_title": "Deal & Downpayment",
+    "step2_desc": "Transparent pricing and timeline agreement.",
+    "step3_title": "Development",
+    "step3_desc": "Code execution with industry standards.",
+    "step4_title": "Phase Testing",
+    "step4_desc": "Private staging tests with stakeholders.",
+    "step5_title": "Go Live & Final Payment",
+    "step5_desc": "The system is ready for production use!"
   }
 }

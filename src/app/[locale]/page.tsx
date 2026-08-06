@@ -8,6 +8,7 @@ const loadingSkeleton = () => <div className="h-screen w-full animate-pulse bg-s
 
 const Values = dynamic(() => import("@/components/sections/Values"), { loading: loadingSkeleton });
 const Portfolio = dynamic(() => import("@/components/sections/Portfolio"), { loading: loadingSkeleton });
+const Workflow = dynamic(() => import("@/components/sections/Workflow"), { loading: loadingSkeleton });
 const Pricing = dynamic(() => import("@/components/sections/Pricing"), { loading: loadingSkeleton });
 const Booking = dynamic(() => import("@/components/sections/Booking"), { loading: loadingSkeleton });
 
@@ -31,6 +32,7 @@ export default async function Home({
           <Hero />
           <Values />
           <Portfolio />
+          <Workflow />
           <Pricing />
           <Booking />
         </div>

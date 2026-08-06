@@ -22,6 +22,14 @@ Proyek ini dibangun menggunakan teknologi mutakhir berikut:
 
 ## Changelog / Release Notes
 
+### v26.0 - Advanced UI/UX, Pagination, & Workflow Integration
+
+- **Portfolio Layout & UX:** Mengubah grid portofolio menjadi responsif (1 kolom di Mobile untuk keterbacaan teks maksimal, 2 kolom di Desktop).
+- **Classic Numeric Pagination:** Mengimplementasikan fitur paginasi angka (*Client-Side Slicing* dengan `useState`) pada seksi Portofolio untuk menjaga UX dan memastikan skor Lighthouse TBT tetap 100/100 tanpa membebani load awal.
+- **Workflow Section:** Membuat komponen *Server Component* baru untuk alur kerja (Konsultasi hingga Go-Live) menggunakan UI *Vertical Timeline* (*Zigzag* di Desktop, *Left-anchored* di Mobile) lengkap dengan dukungan bilingual (i18n).
+- **Navigation Integration:** Memperbarui menu Navbar (Desktop) dan Sidebar (Mobile) dengan tautan *smooth scroll anchor* (`#workflow`) yang ditempatkan strategis di antara menu Portofolio dan Harga.
+- **Broad SEO Scope (B2B & B2C):** Menyempurnakan metadata global (`layout.tsx`) dengan *Title Tag*, *Keywords*, dan *Description* baru yang menargetkan pasar pengembangan E-Commerce dan Consumer Apps, agar relevan dengan proyek portofolio seperti KKF Label.
+
 ### v15.0 - Hyper-Responsive UI & Zero Latency Routing
 
 - **Database & Infrastructure Fix:** Berhasil mengatasi error `ENOTFOUND` dengan memulihkan (resume) project database Supabase dan memastikan injeksi environment variables (`DATABASE_URL`, `RESEND_API_KEY`, Turnstile keys) di Vercel sudah bersih tanpa komentar/typo.

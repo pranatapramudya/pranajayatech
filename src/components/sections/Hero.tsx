@@ -1,15 +1,10 @@
-"use client";
-
 import { useTranslations } from "next-intl";
 import { buttonVariants } from "@/components/ui/button";
 import { ArrowRight, Terminal } from "lucide-react";
 import { Link } from "@/i18n/routing";
-import { m } from "framer-motion";
-import { useMobile } from "@/hooks/use-mobile";
 
 export function Hero() {
   const t = useTranslations("Hero");
-  const isMobile = useMobile();
 
   return (
     <section className="relative overflow-hidden pt-24 pb-32 sm:pt-32 sm:pb-40 lg:pb-48" style={{ contain: "paint layout" }}>
@@ -28,48 +23,36 @@ export function Hero() {
 
       <div className="container mx-auto px-4 sm:px-8 relative z-10">
         <div className="mx-auto max-w-4xl text-center">
-          <m.div 
-            initial={{ opacity: 0, y: isMobile ? 0 : 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.25, ease: "easeOut" }}
+          <div 
             className="mb-8 flex justify-center transform-gpu will-change-transform"
-            style={{ willChange: "transform, opacity" }}
+            style={{ animation: 'fade-in-up 0.7s ease-out both' }}
           >
             <div className="relative inline-flex overflow-hidden rounded-full p-[1px] active:scale-95 active:opacity-80 transition-all duration-75">
               <span className="absolute inset-[-1000%] animate-spin-slow bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0%,#E2B875_50%,transparent_100%)]" />
-              <div className="inline-flex cursor-pointer items-center justify-center rounded-full bg-slate-950 px-3 py-1 text-sm leading-6 font-medium text-primary backdrop-blur-3xl gap-2">
+              <div className="inline-flex cursor-pointer items-center justify-center rounded-full bg-slate-950/80 px-3 py-1 text-sm leading-6 font-medium text-primary md:backdrop-blur-3xl gap-2">
                 <Terminal className="h-4 w-4" />
                 Pranajaya Tech System <span className="hidden sm:inline">Online</span>
               </div>
             </div>
-          </m.div>
+          </div>
           
-          <m.h1 
-            initial={{ opacity: 0, y: isMobile ? 0 : 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.25, ease: "easeOut" }}
+          <h1 
             className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight mb-6 text-transparent bg-clip-text bg-gradient-to-br from-zinc-100 via-zinc-300 to-zinc-600 drop-shadow-sm leading-tight transform-gpu will-change-transform"
-            style={{ willChange: "transform, opacity" }}
+            style={{ animation: 'fade-in-up 0.7s ease-out 0.1s both' }}
           >
             {t("headline")}
-          </m.h1>
+          </h1>
           
-          <m.p 
-            initial={{ opacity: 0, y: isMobile ? 0 : 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.25, ease: "easeOut" }}
+          <p 
             className="mt-6 text-lg leading-8 text-muted-foreground max-w-2xl mx-auto transform-gpu will-change-transform"
-            style={{ willChange: "transform, opacity" }}
+            style={{ animation: 'fade-in-up 0.7s ease-out 0.2s both' }}
           >
             {t("subheadline")}
-          </m.p>
+          </p>
           
-          <m.div 
-            initial={{ opacity: 0, y: isMobile ? 0 : 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.25, ease: "easeOut" }}
+          <div 
             className="mt-8 flex flex-col sm:flex-row items-center justify-center w-full gap-4 px-4 transform-gpu will-change-transform"
-            style={{ willChange: "transform, opacity" }}
+            style={{ animation: 'fade-in-up 0.7s ease-out 0.3s both' }}
           >
             <Link 
               href="#contact" 
@@ -83,7 +66,7 @@ export function Hero() {
             >
               {t("cta_secondary")}
             </Link>
-          </m.div>
+          </div>
         </div>
       </div>
     </section>
