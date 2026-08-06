@@ -93,6 +93,7 @@
   html {
     @apply font-sans;
     color-scheme: dark;
+    scroll-behavior: smooth;
   }
   
   /* OPTIMIZATION: Eliminate 300ms tap delay on mobile devices */

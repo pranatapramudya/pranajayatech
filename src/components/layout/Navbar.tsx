@@ -43,6 +43,14 @@ export function Navbar() {
 
   const closeMenu = () => setIsOpen(false);
 
+  const handleHomeClick = (e: React.MouseEvent) => {
+    if (window.location.pathname === '/' || window.location.pathname === '/en' || window.location.pathname === '/id') {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    closeMenu();
+  };
+
   return (
     <header className={`sticky top-0 z-50 w-full border-b transition-all duration-300 transform-gpu ${
       isScrolled 
@@ -51,7 +59,7 @@ export function Navbar() {
     }`}>
       <div className="container mx-auto flex h-16 items-center justify-between px-4 sm:px-8">
         <div className="flex items-center gap-2">
-          <Link href="/" className="flex items-center space-x-2" onClick={closeMenu}>
+          <Link href="/" className="flex items-center space-x-2" onClick={handleHomeClick} prefetch={false}>
             <span className="font-bold text-xl tracking-tighter text-primary">
               Pranajaya<span className="text-foreground">Tech</span>
             </span>
@@ -59,19 +67,19 @@ export function Navbar() {
         </div>
 
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-muted-foreground">
-          <Link href="/" className="transition-colors hover:text-foreground">
+          <Link href="/" className="transition-colors hover:text-foreground" onClick={handleHomeClick} prefetch={false}>
             {t("home")}
           </Link>
-          <Link href="#values" className="transition-colors hover:text-foreground">
+          <Link href="#values" className="transition-colors hover:text-foreground" prefetch={false}>
             {t("values")}
           </Link>
-          <Link href="#portfolio" className="transition-colors hover:text-foreground">
+          <Link href="#portfolio" className="transition-colors hover:text-foreground" prefetch={false}>
             {t("portfolio")}
           </Link>
-          <Link href="#workflow" className="transition-colors hover:text-foreground">
+          <Link href="#workflow" className="transition-colors hover:text-foreground" prefetch={false}>
             {t("workflow")}
           </Link>
-          <Link href="#pricing" className="transition-colors hover:text-foreground">
+          <Link href="#pricing" className="transition-colors hover:text-foreground" prefetch={false}>
             {t("pricing")}
           </Link>
         </nav>
@@ -80,6 +88,7 @@ export function Navbar() {
           <div className="hidden sm:block">
             <Link 
               href="#contact" 
+              prefetch={false}
               className={buttonVariants({ variant: "outline", size: "sm" }) + " border-primary/20 hover:border-primary/50 text-primary transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_-10px_rgba(79,70,229,0.5)]"}
             >
               {t("book")}
@@ -111,23 +120,23 @@ export function Navbar() {
               </SheetHeader>
               
               <div className="flex flex-col gap-2 mb-8">
-                <Link href="/" onClick={closeMenu} className="flex items-center gap-3 py-3 px-3 text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-200">
+                <Link href="/" onClick={handleHomeClick} prefetch={false} className="flex items-center gap-3 py-3 px-3 text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-200">
                   <Home className="w-5 h-5" />
                   <span className="font-medium text-base">{t("home")}</span>
                 </Link>
-                <Link href="#values" onClick={closeMenu} className="flex items-center gap-3 py-3 px-3 text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-200">
+                <Link href="#values" onClick={closeMenu} prefetch={false} className="flex items-center gap-3 py-3 px-3 text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-200">
                   <Layers className="w-5 h-5" />
                   <span className="font-medium text-base">{t("values")}</span>
                 </Link>
-                <Link href="#portfolio" onClick={closeMenu} className="flex items-center gap-3 py-3 px-3 text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-200">
+                <Link href="#portfolio" onClick={closeMenu} prefetch={false} className="flex items-center gap-3 py-3 px-3 text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-200">
                   <FolderOpen className="w-5 h-5" />
                   <span className="font-medium text-base">{t("portfolio")}</span>
                 </Link>
-                <Link href="#workflow" onClick={closeMenu} className="flex items-center gap-3 py-3 px-3 text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-200">
+                <Link href="#workflow" onClick={closeMenu} prefetch={false} className="flex items-center gap-3 py-3 px-3 text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-200">
                   <Activity className="w-5 h-5" />
                   <span className="font-medium text-base">{t("workflow")}</span>
                 </Link>
-                <Link href="#pricing" onClick={closeMenu} className="flex items-center gap-3 py-3 px-3 text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-200">
+                <Link href="#pricing" onClick={closeMenu} prefetch={false} className="flex items-center gap-3 py-3 px-3 text-slate-400 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-200">
                   <CreditCard className="w-5 h-5" />
                   <span className="font-medium text-base">{t("pricing")}</span>
                 </Link>
@@ -158,6 +167,7 @@ export function Navbar() {
                 <Link 
                   href="#contact" 
                   onClick={closeMenu}
+                  prefetch={false}
                   className="flex items-center justify-center w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold py-3 rounded-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_-10px_rgba(79,70,229,0.5)]"
                 >
                   {t("book")}
