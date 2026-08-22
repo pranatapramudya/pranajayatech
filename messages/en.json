@@ -55,6 +55,55 @@
     "kkf_cta": "View Storefront",
     "kkf_link": "https://kkf-label.vercel.app/"
   },
+  "Products": {
+    "badge": "PJTech Business Products",
+    "title1": "Cloud-Based SME",
+    "title2": "Operational Templates",
+    "description": "As a technology agency, Pranajaya Tech provides not only ready-to-use SME operational templates, but also full-service installation, customization, and cloud server management.",
+    "items": {
+      "fnb": {
+        "title": "Food & Beverage (F&B)",
+        "description": "Complete operational system for restaurants, cafes, and stalls. Manage orders, tables, and raw material inventory in real-time.",
+        "features": {
+          "0": "Table & Queue Management",
+          "1": "Recipe & Ingredient Inventory",
+          "2": "Payment Integration"
+        },
+        "status": "Live Demo"
+      },
+      "retail": {
+        "title": "Retail & Wholesale Stores",
+        "description": "Smart store management platform to monitor inventory, scan barcodes, and generate automatic daily sales reports.",
+        "features": {
+          "0": "Barcode & Scanner System",
+          "1": "Multi-Branch Management",
+          "2": "Automatic Financial Reports"
+        },
+        "status": "Template Ready"
+      },
+      "services": {
+        "title": "Services & Maintenance",
+        "description": "Service scheduling system, technician management, and commission tracking for workshops, salons, or other professional services.",
+        "features": {
+          "0": "Booking & Scheduling",
+          "1": "Technician Commission Management",
+          "2": "Customer Notifications"
+        },
+        "status": "Template Ready"
+      },
+      "rental": {
+        "title": "Rental & Travel",
+        "description": "Manage fleet, rental scheduling, and customer deposits in one integrated dashboard for rental and travel businesses.",
+        "features": {
+          "0": "Fleet Booking Calendar",
+          "1": "Deposit Management",
+          "2": "Return Tracking"
+        },
+        "status": "Template Ready"
+      }
+    },
+    "view_template": "View Template"
+  },
   "Pricing": {
     "title": "Pricing Architecture",
     "subtitle": "Transparent pricing for elite engineering.",

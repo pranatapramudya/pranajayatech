@@ -51,6 +51,55 @@
     "kkf_cta": "Lihat Toko",
     "kkf_link": "https://kkf-label.vercel.app/"
   },
+  "Products": {
+    "badge": "Produk Bisnis PJTech",
+    "title1": "Template Sistem UMKM",
+    "title2": "Berbasis Cloud & Siap Pakai",
+    "description": "Sebagai penyedia jasa (agency), Pranajaya Tech tidak hanya menyajikan template sistem operasional UMKM, tetapi juga layanan instalasi, kustomisasi, dan pengelolaan server cloud secara penuh.",
+    "items": {
+      "fnb": {
+        "title": "Food & Beverage (F&B)",
+        "description": "Sistem operasional lengkap untuk restoran, cafe, dan kedai. Kelola pesanan, meja, dan inventori bahan baku secara real-time.",
+        "features": {
+          "0": "Manajemen Meja & Antrean",
+          "1": "Inventori Resep & Bahan",
+          "2": "Integrasi Pembayaran"
+        },
+        "status": "Live Demo"
+      },
+      "retail": {
+        "title": "Toko Retail & Grosir",
+        "description": "Platform manajemen toko cerdas untuk memantau stok barang, scan barcode kasir, dan laporan penjualan harian otomatis.",
+        "features": {
+          "0": "Sistem Barcode & Scanner",
+          "1": "Manajemen Multi-Cabang",
+          "2": "Laporan Keuangan Otomatis"
+        },
+        "status": "Template Ready"
+      },
+      "services": {
+        "title": "Jasa & Servis",
+        "description": "Sistem penjadwalan layanan, manajemen teknisi, dan pencatatan komisi untuk bengkel, salon, atau jasa profesional lainnya.",
+        "features": {
+          "0": "Booking & Penjadwalan",
+          "1": "Manajemen Komisi Teknisi",
+          "2": "Notifikasi Pelanggan"
+        },
+        "status": "Template Ready"
+      },
+      "rental": {
+        "title": "Rental & Travel",
+        "description": "Kelola armada, penjadwalan sewa, dan deposit pelanggan dalam satu dashboard terintegrasi untuk bisnis rental dan travel.",
+        "features": {
+          "0": "Kalender Booking Armada",
+          "1": "Manajemen Deposit",
+          "2": "Tracking Pengembalian"
+        },
+        "status": "Template Ready"
+      }
+    },
+    "view_template": "Lihat Template"
+  },
   "Pricing": {
     "title": "Arsitektur Harga",
     "subtitle": "Harga yang transparan untuk hasil rekayasa elit.",
