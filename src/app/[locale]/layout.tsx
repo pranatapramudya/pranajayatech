@@ -34,11 +34,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
   const isId = locale === 'id';
 
-  const title = isId 
-    ? "PranajayaTech | Software House & Jasa Pembuatan Website B2B/B2C" 
+  const title = isId
+    ? "PranajayaTech | Software House & Jasa Pembuatan Website B2B/B2C"
     : "PranajayaTech | Custom Web, SaaS & E-Commerce Agency";
 
-  const description = isId 
+  const description = isId
     ? "PranajayaTech adalah Software House dari Sumedang, Indonesia. Kami membantu digitalisasi bisnis Anda melalui pembuatan website custom, e-commerce toko online, hingga aplikasi manajemen B2B dan B2C siap pakai."
     : "PranajayaTech is a premium software agency based in Indonesia. We build custom web applications, consumer e-commerce platforms, and ship production-ready premium SaaS boilerplates in weeks.";
 
