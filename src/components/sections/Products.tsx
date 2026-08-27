@@ -14,7 +14,7 @@ const products = [
     color: "from-orange-500/20 to-orange-500/0",
     border: "border-orange-500/30",
     glow: "group-hover:shadow-[0_0_30px_rgba(249,115,22,0.15)]",
-    demoLink: "https://kasir-umkm-pjtech.vercel.app/",
+    demoLink: "https://www.pjtechumkm.com/",
     status: "Live Demo",
   },
   {
@@ -26,7 +26,7 @@ const products = [
     color: "from-emerald-500/20 to-emerald-500/0",
     border: "border-emerald-500/30",
     glow: "group-hover:shadow-[0_0_30px_rgba(16,185,129,0.15)]",
-    demoLink: "https://kasir-umkm-pjtech.vercel.app/",
+    demoLink: "https://www.pjtechumkm.com/",
     status: "Template Ready",
   },
   {
@@ -38,7 +38,7 @@ const products = [
     color: "from-blue-500/20 to-blue-500/0",
     border: "border-blue-500/30",
     glow: "group-hover:shadow-[0_0_30px_rgba(59,130,246,0.15)]",
-    demoLink: "https://kasir-umkm-pjtech.vercel.app/",
+    demoLink: "https://www.pjtechumkm.com/",
     status: "Template Ready",
   },
   {
@@ -50,7 +50,7 @@ const products = [
     color: "from-purple-500/20 to-purple-500/0",
     border: "border-purple-500/30",
     glow: "group-hover:shadow-[0_0_30px_rgba(168,85,247,0.15)]",
-    demoLink: "https://kasir-umkm-pjtech.vercel.app/",
+    demoLink: "https://www.pjtechumkm.com/",
     status: "Template Ready",
   },
 ];
