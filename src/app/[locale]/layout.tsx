@@ -6,6 +6,7 @@ import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { MotionProvider } from "@/components/providers/MotionProvider";
 import { JsonLd } from "@/components/seo/JsonLd";
 
@@ -106,6 +107,7 @@ export default async function RootLayout({
           </MotionProvider>
         </NextIntlClientProvider>
         <Analytics />
+        <SpeedInsights />
         <JsonLd />
       </body>
     </html>
