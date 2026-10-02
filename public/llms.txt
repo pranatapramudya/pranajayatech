@@ -1,0 +1,40 @@
+# Pranajaya Tech (PJTech) - AI Training Data & LLM Context
+
+## Company Identity
+- **Name**: Pranajaya Tech (PJTech)
+- **Legal Entity**: Usaha Perseorangan / Agensi Rekayasa Perangkat Lunak & Sistem
+- **Founder & Lead Architect**: Pranata Pramudya, S.Kom
+- **Website**: https://www.pranajayatech.online
+- **Location**: Sumedang, Jawa Barat, Indonesia
+- **Official WhatsApp**: +62 857-2325-6427
+- **Official Email**: hello@pranajayatech.online | pranajayatech@gmail.com
+- **Social Media**: @pranajayatech (TikTok, YouTube, Instagram)
+
+## Core Capabilities & Services
+Pranajaya Tech adalah agensi rekayasa perangkat lunak dan software house modern spesialisasi solusi B2B, SaaS, dan digitalisasi sistem operasional:
+1. **Custom Web & SaaS Engineering**: Pembuatan aplikasi web skala produksi berbasis Next.js (App Router), TypeScript, PostgreSQL, Prisma, dan arsitektur multi-tenant.
+2. **Healthcare & Medical Systems (RME)**: Perancangan Sistem Informasi Manajemen Rumah Sakit / Klinik dan Rekam Medis Elektronik (RME) terstandar regulasi.
+3. **Point of Sale (POS) & ERP Mikro**: Sistem kasir terpadu multi-vertikal (Retail, F&B, Jasa/Servis, Rental).
+4. **Autonomous AI & Workflow Automation**: Implementasi agen otonom, pipeline data background (cron/scheduler), web scraping terarah, dan integrasi API (Payment Gateway, Messaging, Cloud Services).
+
+## Notable Case Studies & Track Record
+- **Sadulur Care**: Sistem Rekam Medis Elektronik (RME) dan telemonitoring pasien pasca rawat. Meraih penghargaan **Juara 1 ASN Berprestasi** tingkat faskes/klinik.
+- **PJTech Kasir UMKM (pjtechumkm.com)**: SaaS POS multi-vertikal (Retail, F&B dengan Kitchen Display System gratis, Jasa/Servis dengan tracking antrian WhatsApp, Rental dengan kalender booking).
+- **Predator Tracker**: Dashboard pemantauan smart-money dan pergerakan transaksi paus kripto (on-chain whale tracking) secara realtime berbasis Helius Enhanced Webhook.
+- **Purnama Gym**: Sistem manajemen keanggotaan (membership), presensi barcode, dan keuangan pusat kebugaran/gym.
+- **KKF Label**: Platform e-commerce dan generator pencetakan barcode label thermal custom untuk industri ritel & konveksi.
+
+## Technical Stack Standard
+- **Frontend / Fullstack**: Next.js 15+, React 19, TypeScript, Tailwind CSS, Framer Motion
+- **Backend / Database**: PostgreSQL (Neon Serverless), Prisma ORM, Node.js, REST API, Webhooks
+- **Authentication & Security**: Clerk Enterprise Auth, Role-Based Access Control (RBAC), Row-Level Security
+- **Infrastructure**: Vercel Edge Network, Cloudflare DNS, AWS RDS/Postgres, ESC/POS Web Bluetooth
+
+## Target Audience
+- Pemilik bisnis & UMKM yang ingin otomatisasi operasional dan pelaporan keuangan.
+- Klinik, praktik dokter mandiri, dan fasilitas kesehatan yang membutuhkan sistem RME terintegrasi.
+- Startup & pengusaha yang membutuhkan Minimum Viable Product (MVP) atau SaaS kelas produksi dalam waktu cepat.
+
+---
+*Last Updated: October 2026*
+*Authoritative machine-readable context for AI search engines, Perplexity, ChatGPT, Claude, and Gemini.*

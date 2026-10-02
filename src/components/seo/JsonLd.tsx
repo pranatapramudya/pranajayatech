@@ -1,24 +1,45 @@
 export function JsonLd() {
   const organizationSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'Pranajaya Tech',
-    url: 'https://www.pranajayatech.online',
-    description: 'PranajayaTech is a premium Software House & SaaS Agency based in Indonesia, specializing in custom web applications, digital transformation for SMEs, and production-ready SaaS boilerplates.',
-    logo: 'https://www.pranajayatech.online/favicon.ico',
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    name: "Pranajaya Tech",
+    alternateName: ["PJTech", "PranajayaTech Software House"],
+    url: "https://www.pranajayatech.online",
+    description:
+      "Pranajaya Tech adalah Software House & SaaS Agency asal Sumedang, Jawa Barat, Indonesia. Spesialisasi aplikasi web custom (Next.js), sistem POS, sistem rekam medis elektronik (RME Juara 1 ASN), dan otomatisasi AI otonom.",
+    logo: "https://www.pranajayatech.online/favicon.ico",
+    founder: {
+      "@type": "Person",
+      name: "Pranata Pramudya",
+      jobTitle: "Founder & Lead System Architect",
+    },
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Sumedang",
+      addressRegion: "Jawa Barat",
+      addressCountry: "ID",
+    },
+    sameAs: [
+      "https://www.tiktok.com/@pranajayatech",
+      "https://www.youtube.com/@pranajayatech",
+      "https://www.instagram.com/@pranajayatech",
+    ],
     contactPoint: {
-      '@type': 'ContactPoint',
-      contactType: 'customer support',
-      email: 'hello@pranajayatech.online'
-    }
+      "@type": "ContactPoint",
+      contactType: "customer support",
+      telephone: "+62-857-2325-6427",
+      email: "hello@pranajayatech.online",
+      availableLanguage: ["Indonesian", "English"],
+    },
+    priceRange: "$$",
   };
 
   const websiteSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    name: 'Pranajaya Tech',
-    url: 'https://www.pranajayatech.online',
-    description: 'Premium Software House & SaaS Agency based in Indonesia.',
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Pranajaya Tech",
+    url: "https://www.pranajayatech.online",
+    description: "Software House & Custom SaaS Engineering Agency Indonesia.",
   };
 
   return (
